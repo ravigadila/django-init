@@ -1,2 +1,7 @@
 # django-init
-common functionalities every django project needs
+common functionalities used in every django project.
+
+## Functionalities:
+- Login
+- Register
+- Logout
