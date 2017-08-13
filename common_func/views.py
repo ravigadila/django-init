@@ -90,6 +90,7 @@ class LogInView(LoginView):
     def form_valid(self, form):
         """Security check complete. Log the user in."""
         login(self.request, form.get_user())
+        print('self.get_success_url()', self.get_success_url())
         if self.request.is_ajax():
             return JsonResponse({'error': False, 'success_url': self.get_success_url()})
         return HttpResponseRedirect(self.get_success_url())
